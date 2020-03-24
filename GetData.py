@@ -48,16 +48,19 @@ def getPageSource():
     newdf['Total_cases']=newdf['Old_cases'] + newdf['New_cases']
     newdf['Total_Deaths']=newdf['Old_Deaths'] + newdf['New_Deaths']
     Data=newdf[['countries','Total_cases','Total_Deaths','Total_recovered','Active_cases']]
-    Data.to_json('E:\Office Python Project\Data.json',orient='records')
-    html_file = open('E:\Office Python Project\Chart.html', 'r')
+    Data.to_json('Data.json',orient='records')
+    html_file = open('E:\Office Python Project\WebScrapy2\Chart.html', 'r')
     html_content = html_file.read()
-    json_file = open('E:\Office Python Project\Data.json','r')
+    replacecont=html_content
+    json_file = open('Data.json','r')
     json_content = json_file.read( )
-    newrec=html_content.replace('record',json_content)
+    newrec=replacecont.replace('record',json_content)
     
-    new_html=open('E:\Office Python Project\Chart.html', 'w')
-    new_html.write(newrec)
-    new_html.close()
+    update_html=open('E:\Office Python Project\WebScrapy2\Chart2.html', 'w')
+    update_html.write(newrec)
+
+    update_html.close()
     html_file.close()
+
 
 getPageSource()
