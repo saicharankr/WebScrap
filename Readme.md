@@ -28,5 +28,5 @@ Analysis, Building a price comparison application, etc.  )
 
 3.  Requests.
 
-# The following are the steps to proceed with the project.
-# Visit this link for exact step by step making of the project:-https://medium.com/analytics-vidhya/graphical-view-of-coronavirus-live-update-using-python-f83903e5870
+### The following are the steps to proceed with the project.
+##### Visit this link for exact step by step making of the project:-https://medium.com/analytics-vidhya/graphical-view-of-coronavirus-live-update-using-python-f83903e5870
